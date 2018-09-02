@@ -1,0 +1,75 @@
+
+1. Hvað er null og undefined?
+  ---null er gild breyta sem er bara null og undefined er breyta sem hefur ekkert gildi eða er ekki búið úthluta
+
+2. Hvað gerir 'use strict' í JavaScript kóða?
+ ---hann situr kóðan í strict mode sem bannar undefined breytur og hjalpar að halda koðanum hreinum t.d. þegar þu  gerir koða global
+
+3. Hver er munurinn á let og var?
+  ---let er ekki global og virkar bara in i lykkju eða statement sem þu ert að nota og var er global 
+  
+4. Skilgreindu fall á þrjá mismunandi vegu með kóðasýnidæmi.
+  ---
+
+5. Útskýrðu hvað eftirfarandi kóði gerir, hvað gera svigarnir?
+  (function() { alert('Hello World'); })();
+  ---
+  
+6. Í hvaða röð er kóðinn keyrður í raun eftir að JS þýðandinn (e. interpreter) er búinn að fá
+hann til sín? Raðaðu kóðanum rétt fyrir JS þýðandanum. Afhverju er útkoman 8? Útskýrðu.
+  function foo(){
+  function bar() {
+  return 3;
+  }
+  return bar();
+  function bar() {
+  return 8;
+  }
+  }
+  alert(foo());
+---
+
+7. Hver er munurinn á for, for-in og for-of lykkjum?
+  ---for er bara fyrir hver lið eða hvert gildi t.d í int og string
+    forout tekur hvert gildi i lið t.d string = "sting" for-in s, t, r, i, ,n ,g
+    for-in tekur hvert gildi t.d í var eins og var[1,2,3,] for-in (a,c,b)
+  
+  
+8. forEach() Leystu lið 20 í Arrays á Udacity https://classroom.udacity.com/courses/ud803
+  --- 
+  test.forEach(function (value, i, arr)// classic for lykkja sem skoðar value a öllum tölum
+    {
+        if (value % 3 === 0)// ef tala er deilaleg með 3 er bætt 100 á hanna
+        {
+            arr[i]+= 100;
+        }
+    }
+
+);
+
+console.log(test+"/n");
+  
+9. Hvað gerir .map() fylkjaaðferðin? Leystu lið 22 í Arrays á Udacity
+https://classroom.udacity.com/courses/ud803
+  ---.map() byr til nytt array sem þu getur notað með funtion fyrir hvert array t.d numbers.map(Math.sqrt);
+
+10. Leystu lið 25 í Arrays í lesson 6 á Udacity
+https://classroom.udacity.com/courses/ud803
+  ---
+  for (var x = 0; x < numbers.length; x++) // for lykkja til að fara i gegnum allar tölunar i numbers
+    {
+        for (var y = 0; y < numbers[x].length; y++)
+        {
+            if (numbers[x][y] % 2 === 0) // til að gá hvort hun er deilanleg með tvemur til að sja hvort hun er jöfn
+            {
+                
+                numbers[x][y] = 'even';
+            }
+            else  //annars er hun ekki jöfn
+            {
+                numbers[x][y] = 'odd';
+            }
+        }
+    }
+
+console.log(numbers + "/n "); // byrting "/n er til að það haldi afram i linu og kemur ekki beint niður"
